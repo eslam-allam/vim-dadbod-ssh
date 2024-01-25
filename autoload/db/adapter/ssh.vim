@@ -174,11 +174,6 @@ function! db#adapter#ssh#create_tunnel(url) abort
   call s:get_tunneled_url(a:url, v:true)
 endfunction
 
-" function! db#adapter#ssh#canonicalize(url) abort
-"   let url = s:get_tunneled_url(a:url)
-"   return call(s:fn_name(l:url, 'canonicalize'), [l:url])
-" endfunction
-
 function! db#adapter#ssh#interactive(url) abort
   let url = s:get_tunneled_url(a:url)
   return call(s:fn_name(l:url, 'interactive'), [l:url])
